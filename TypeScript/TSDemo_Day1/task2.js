@@ -1,0 +1,12 @@
+var empid = 5464654;
+var empname = "Scott";
+var empjob = "Manager";
+var isPermanentEmployee = true;
+var empSalary = 45000;
+var empDeptNo = 10;
+console.log("Employee Id : " + empid);
+console.log("Employee Name : " + empname);
+console.log("Employee Job : " + empjob);
+console.log("Is Permanent Employee : " + isPermanentEmployee);
+console.log("Employee Salary : INR." + empSalary);
+console.log("Employee Deptno : " + empDeptNo);
