@@ -1,26 +1,24 @@
-class Customer
-{
-    public Custid:number =0;
-    public Custname:string="";
-    public Custcity:string="";
-
-    constructor(Custid:number = 0,Custname:string="",Custcity:string="")
-    {
-      this.Custid=Custid;
-      this.Custname=Custname;
-      this.Custcity=Custcity;
-    } 
-    public ShowDetails() :void
-    {
-        console.log("Customer Details  ::   Id : "+this.Custid+", Name : "+this.Custname +", City : "+this.Custcity);
+var Customer = /** @class */ (function () {
+    function Customer(Custid, Custname, Custcity) {
+        if (Custid === void 0) { Custid = 0; }
+        if (Custname === void 0) { Custname = ""; }
+        if (Custcity === void 0) { Custcity = ""; }
+        this.Custid = 0;
+        this.Custname = "";
+        this.Custcity = "";
+        this.Custid = Custid;
+        this.Custname = Custname;
+        this.Custcity = Custcity;
     }
-}
-
-let c1:Customer = new Customer();
-let c2:Customer = new Customer(10256);
-let c3:Customer = new Customer(10256, "Scott");
-let c4:Customer = new Customer(10256, "Scott", "Hyd");
-
+    Customer.prototype.ShowDetails = function () {
+        console.log("Customer Details  ::   Id : " + this.Custid + ", Name : " + this.Custname + ", City : " + this.Custcity);
+    };
+    return Customer;
+}());
+var c1 = new Customer();
+var c2 = new Customer(10256);
+var c3 = new Customer(10256, "Scott");
+var c4 = new Customer(10256, "Scott", "Hyd");
 c1.ShowDetails();
 c2.ShowDetails();
 c3.ShowDetails();
