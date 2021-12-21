@@ -1,0 +1,69 @@
+
+<h3>Cities List</h3>
+
+<ul>
+  <li *ngFor="let city of cityArray">
+      {{city}}
+  </li>
+</ul>
+
+<div style="border:4px double blue; width:300px; padding : 5px; border-radius: 10px;">
+    <h3>Dept Details</h3>
+    Department Number  : {{deptObj.deptno}}  <br/>
+    Department Name  : {{deptObj.dname}}  <br/>
+    Department Location  : {{deptObj.loc}}  <br/>
+  </div>
+  <hr/>
+  
+  
+  <table border="2"  width="500">
+    <tr>
+      <th>Dept Number</th>
+      <th>Dept Name</th>
+      <th>Dept Location</th>
+    </tr>
+  
+    <tr *ngFor="let item of deptsArray">
+      <td>{{item.deptno}}</td>
+      <td>{{item.dname}}</td>
+      <td>{{item.loc}}</td>
+    </tr>
+  </table>
+
+  <hr/>
+  <h4>List Of Technologies:</h4>
+  <p>{{technologyArray}}</p>
+  <hr/>
+  <table border="2"  width="700">
+    <tr>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Product Category</th>
+      <th>Product Qty</th>
+    </tr>
+  
+    <tr *ngFor="let Proditem of ProductArray">
+      <td>{{Proditem.ProductID}}</td>
+      <td>{{Proditem.ProductName}}</td>
+      <td>{{Proditem.ProductPrice}}</td>
+      <td>{{Proditem.ProductCategory}}</td>
+      <td>{{Proditem.ProductQty}}</td>
+      
+    </tr>
+  </table>
+  <hr/>
+  <div class="row">
+    <div class="one-fourth" *ngFor = "let item of TechArray">
+        <div class="card2">
+          
+            <img src={{item.TechImg}} style="width:25%;align-items: center;"class="center">
+            <h3 style="text-align:center;">{{item.TechName}}</h3>
+            <div><h5 style="text-align:center;">{{item.TechDesc}}</h5></div> 
+            
+        </div> 
+    </div>
+  </div>
+  
+<hr/>
+<app-login></app-login>
